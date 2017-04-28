@@ -23,8 +23,8 @@ end
 function PLAYER:setPlayer(n)
 	self.num = n
 	
-	self.left_key = 'a'
-	self.right_key = 'd'
+	self.left_key = "a"
+	self.right_key = "d"
 end
 
 function PLAYER:step(dt)
