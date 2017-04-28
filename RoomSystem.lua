@@ -1,11 +1,7 @@
 ---------------------- Room system -----------------------
--- Should contain a group of entities					--
--- both player entity and all kinds of enemies			--
--- platforms, powerups, coins, items					--
---														--
---														--
---														--
-----------------------------------------------------------
+-- Should contain a group of entities
+-- both player entity and all kinds of enemies
+-- platforms, powerups, coins, items
 
 local ROOM =
 {
@@ -25,10 +21,11 @@ function newEnitity(entity, id)
 	id = id or self.id_counter
 	self.ENTITIES[id] = entity:new()
 	id_counter = id_counter + 1
-	return self.
+	return self.ENTITIES[id]
 end
 
+--- For creating an entity in the new room
 function placeEntity(x,y,entity)
 	e = newEntity(entity)
-	e:place()
+	e:place(x,y)
 end

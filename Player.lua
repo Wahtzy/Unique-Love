@@ -23,13 +23,8 @@ end
 function PLAYER:setPlayer(n)
 	self.num = n
 	
-	-- Keys
-	filestring = 'defaultKeys_player_' .. tostring(self.num) .. '.ini'
-	local LIP = require ('LIP')
-	keys = LIP.load(filestring)
-	
-	self.left_key = keys.keyboard.leftKey
-	self.right_key = keys.keyboard.rightKey
+	self.left_key = 'a'
+	self.right_key = 'd'
 end
 
 function PLAYER:step(dt)
