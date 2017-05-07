@@ -8,12 +8,7 @@ Published under the MIT license.
 
 ## Usage
 To implement this into your project make sure to place the code in your game files. The needed files are so far `ul-base.EntitySystem.lua` `ul-base.BoundingBox` and `ul-base.RoomSystem.lua`
-To create a new entity use following code:
-
-```lua
-local entitySystem = require('EntitySystem')
-local EXAMPLE = entitySystem:new()
-```
+Check included example game to see how these things could be implemented.
 
 Where `EXAMPLE` is the entity you are creating.
 
@@ -36,6 +31,8 @@ So far the Room System provides following methods:
 * `ROOM:getEntityCount()` - Returns amount of entities in the room.
 * `ROOM:update(dt)` - Updates all entities in the room, this includes calculating movement and checking collisions.
 * `ROOM:draw(dt)` - Draws all objects in the room.
+(1): IDs are automatically assigned to entities in the rooms, but currently serves no purpose.
+
 
 So far the BoundingBox system provides following methods:
 * `BBOX:new()` - Creates new BBOX.
@@ -45,9 +42,12 @@ So far the BoundingBox system provides following methods:
 * `BBOX:CheckVLineColl(x,y,h, other)` - Returns true if a vertical line, starting at x,y with height h, is inside other's bbox.
 
 ## Roadmap
+- ~~Core functionality~~
+- Debug tools
+- Room storage format
 - Better keypress handling
 - Image and animation support
-- Room storage format
+- Templates for different implementations (sidescroller, topdown, tilebased, so on)
 - Graphical Editor
 
 ## Version 0.2
