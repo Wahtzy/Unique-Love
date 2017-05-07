@@ -1,24 +1,12 @@
-player = require('Player')
-
-local Player1 = player:new()
-
-
-globalVar = 
-{
-	gravityMax = 20,
-	gravityAccel = 45,
-}
-
+require('exampleGame.room1')
+require('exampleGame.globalVar')
 
 function love.load()
-	
-	Player1:place(200, 100)
-	Player1:setPlayer(1)
-	
 	--defaults
 	def_col = {0,0,0,255}
 	quitKey = "escape"
 	restartKey = "l"
+	setupRoom1()
 end
 
 function love.update(dt)
@@ -26,14 +14,11 @@ function love.update(dt)
 		love.event.quit()
 	end
 	if love.keyboard.isDown(restartKey) then
-		love.event.quit( "restart" )
+		love.event.quit("restart")
 	end
-	
-	
-	Player1:step(dt)
-
+	updateRoom1(dt)
 end
 
 function love.draw()
-	Player1:draw()
+	drawRoom1()
 end
