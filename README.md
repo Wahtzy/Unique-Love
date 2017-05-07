@@ -31,6 +31,7 @@ So far the Room System provides following methods:
 * `ROOM:getEntityCount()` - Returns amount of entities in the room.
 * `ROOM:update(dt)` - Updates all entities in the room, this includes calculating movement and checking collisions.
 * `ROOM:draw(dt)` - Draws all objects in the room.
+
 (1): IDs are automatically assigned to entities in the rooms, but currently serves no purpose.
 
 
