@@ -36,7 +36,7 @@ function PLAYER:setPlayer(n)
 	
 	self.left_key = "a"
 	self.right_key = "d"
-	self.jump_key = " "
+	self.jump_key = "space"
 
 	self.debug_up = "up"
 	self.debug_down = "down"
